@@ -37,6 +37,17 @@ jobs:
       - name: Build Release APK
         run: ./gradlew assembleRelease
 
+      - name: Sign APK with release key
+        run: |
+          echo "${{ secrets.RELEASE_KEYSTORE }}" | base64 -d > release.keystore
+          jarsigner -verbose \
+            -keystore release.keystore \
+            -storepass "${{ secrets.RELEASE_KEYSTORE_PASSWORD }}" \
+            -keypass "${{ secrets.RELEASE_KEY_PASSWORD }}" \
+            app/build/outputs/apk/release/app-release-unsigned.apk \
+            "${{ secrets.RELEASE_KEY_ALIAS }}"
+          mv app/build/outputs/apk/release/app-release-unsigned.apk app/build/outputs/apk/release/app-release-signed.apk
+
       - name: Get version from build.gradle
         id: get_version
         run: |
