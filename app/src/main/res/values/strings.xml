@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Coursework</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login_button">Войти</string>
+    <string name="registration_text">Зарегестрироваться?</string>
+    <string name="password_hints">Пароль</string>
+    <string name="login_hints">Имя пользователя</string>
+    <string name="registration_button">Зарегестрироваться</string>
+    <string name="replay_password_hints">Подтвердите пароль</string>
+    <string name="info_percent_error">Процент ошибок</string>
+    <string name="info_passing_test_for_50">Процент пройденных тестов больше чем на 50%</string>
+    <string name="info_user_avatar">User Avatar</string>
+    <string name="exit_button">Выйти</string>
+    <string name="add_task">Добавление нового теста\n</string>
+    <string name="info_description_task">Описание теста:</string>
+    <string name="start_button">Начать</string>
+    <string name="info_count_tries">Количество попыток:</string>
+    <string name="info_question_text">Вопрос:</string>
+    <string name="add_variant_button">Добавить вариант</string>
+    <string name="remove_task_button">Удалить задание</string>
+    <string name="info_text_task">Текст задания</string>
+    <string name="add_task_button">Добавить задание</string>
+    <string name="info_tasks">Задания:</string>
+    <string name="info_full_description">Подробное описание</string>
+    <string name="info_description">Краткое описание</string>
+    <string name="info_name_task">Название задачи</string>
+    <string name="next_button">Далее</string>
+    <string name="finish_button">Завершить</string>
+    <string name="info_infinity_count_attempts">неограничено</string>
+    <string name="delete_button">Удалить</string>
+    <string name="back_button">Назад</string>
+    <string name="info_attempts_solution">Попытки людей:</string>
+</resources>

@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:padding="4dp">
+
+    <RadioButton
+        android:id="@+id/rb_is_correct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/white"
+        app:buttonTint="@color/white"
+        />
+
+    <EditText
+        android:id="@+id/et_option_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:hint="Вариант ответа" />
+
+    <Button
+        android:id="@+id/btn_delete_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Удалить"
+        android:backgroundTint="#3849AB"
+        android:textColor="@color/white" />
+</LinearLayout>

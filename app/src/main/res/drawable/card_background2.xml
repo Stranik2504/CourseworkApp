@@ -1,0 +1,8 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#3849AB" /> <!-- Цвет фона карточки -->
+    <corners android:radius="8dp" /> <!-- Радиус скругления -->
+    <stroke
+        android:width="2dp"
+        android:color="#3849AB" /> <!-- Цвет и толщина рамки -->
+</shape>
