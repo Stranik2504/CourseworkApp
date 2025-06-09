@@ -62,6 +62,6 @@ jobs:
         with:
           tag_name: v${{ steps.get_version.outputs.version_name }}.${{ github.run_number }}
           release_name: Release v${{ steps.get_version.outputs.version_name }}.${{ github.run_number }}
-          files: app/build/outputs/apk/release/app-release-unsigned.apk
+          files: app/build/outputs/apk/release/app-release-signed.apk
           draft: false
           prerelease: false
