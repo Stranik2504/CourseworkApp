@@ -44,7 +44,17 @@ jobs:
           VERSION_NAME=$(grep versionName app/build.gradle | head -1 | awk '{ print $2 }' | tr -d '"')
           echo "version_name=$VERSION_NAME" >> $GITHUB_OUTPUT
 
+      - name: Check if tag exists
+        id: check_tag
+        run: |
+          TAG_NAME=v${{ steps.get_version.outputs.version_name }}
+          if git tag --list "$TAG_NAME"; then
+            echo "tag_exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "tag_exists=false" >> $GITHUB_OUTPUT
+
       - name: Create GitHub Release
+        if: steps.check_tag.outputs.tag_exists == 'false'
         id: create_release
         uses: actions/create-release@v1
         env:
