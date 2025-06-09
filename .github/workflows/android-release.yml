@@ -47,11 +47,17 @@ jobs:
       - name: Check if tag exists
         id: check_tag
         run: |
-          TAG_NAME=v${{ steps.get_version.outputs.version_name }}
+          TAG_NAME="v${{ steps.get_version.outputs.version_name }}"
+          if [ -z "$TAG_NAME" ]; then
+            echo "ERROR: TAG_NAME is empty"
+            exit 1
+          fi
+          
           if git tag --list "$TAG_NAME"; then
             echo "tag_exists=true" >> $GITHUB_OUTPUT
           else
             echo "tag_exists=false" >> $GITHUB_OUTPUT
+          fi
 
       - name: Create GitHub Release
         if: steps.check_tag.outputs.tag_exists == 'false'
